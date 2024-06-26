@@ -4,8 +4,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /*Cor Background Página*/
+    color: #31312F; /*Cor Background texto*/
 }
 
 piscante {
@@ -28,8 +28,8 @@ header {
 
     text-align: center;
     padding: 4em;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    background-color: #E2E3DD; /*Cor Background header*/
+    border-bottom: 1px solid #c8c9c3; /*Cor borda header*/
 }
 header .Informacoes{
     display: flex;
@@ -54,7 +54,11 @@ header p{
 }
 header a{
     text-decoration: none;
-    color:#2118a1;
+    color:#2118a1; 
+}
+
+header a:hover{
+    color:#7972e0 
 }
 
 header img {
@@ -70,12 +74,13 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
+    background-color: #A09F8D; /*Cor Tabela navegação*/
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 nav ul li {
@@ -86,12 +91,13 @@ nav ul li a {
     display: block;
     padding: 1em;
     text-decoration: none;
-    color: #fff;
+    color: #181814; /*Cor Texto Navegação*/
 }
 
 /* Quando passar o cursor em cima dos elementos do nav */
 nav ul li a:hover {
-    background-color: #000000;
+    background-color: #C5C5B9;
+    color:#52524d;
 }
 
 /* Seções */
@@ -101,7 +107,7 @@ section {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #fff; /*Cor Fundo Container*/
     padding: 4%;
 
     border: 1px solid #ddd;
@@ -111,19 +117,25 @@ section {
     position: relative;
     bottom: 10px;
     padding-left: 10px;
+    font-size:larger;
 }
 .container:hover{
     background-color: #f0f0f0;
 }
+
+.container > p {
+    margin-left: 2%;
+}
 .container .ElementosContainer{
     line-height: 100%;
     font-size: small;
+    margin-left: 4%;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #A09F8D;
+    color: #31312F;
     text-align: center;
     padding: 2em 0;
     position: absolute;
@@ -141,14 +153,16 @@ footer ul li {
     margin: 0 1em;
 }
 
-footer ul li a:hover{
-    color:#b1b1b1
-}
-
 footer ul li a {
-    color: #ffffff;
+    color: #31312F; /*Cor Link Redes sociais footer*/
     text-decoration: none;
 }
+
+footer ul li a:hover{
+    color:#ebebe6 /*Cor Link Redes sociais footer HOVER*/
+}
+
+
 
 footer p {
     margin: 0;
@@ -193,12 +207,16 @@ footer p {
         padding-right:2%;
         padding-bottom:1.5%;
     }
+    .container > p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
     .container .ElementosContainer{
         line-height: 100%;
         font-size: small;
-    }
-    .container p{
-        width: 100%;
+        width: 80%;
+        margin-left: 4%;
     }
     .container h3{
         width: 100%;
@@ -211,5 +229,10 @@ footer p {
         width: 80%;
         margin:auto;
     }
+    #experiencia .container > p{
+        width: 95%;
+    }
+    
+    
 
 }
